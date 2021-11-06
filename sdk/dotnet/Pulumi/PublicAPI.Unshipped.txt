@@ -1,2 +1,3 @@
+Pulumi.InputList<T>.Add(Pulumi.Output<System.Collections.Immutable.ImmutableArray<T>> values) -> void
 Pulumi.ResourceOptions.ReplaceOnChanges.get -> System.Collections.Generic.List<string>
 Pulumi.ResourceOptions.ReplaceOnChanges.set -> void

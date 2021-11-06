@@ -62,6 +62,13 @@ namespace Pulumi
             _outputValue = Output.Concat(_outputValue, Output.All(inputs));
         }
 
+        public void Add(Output<ImmutableArray<T>> values)
+        {
+            // Make an Output from the values passed in, mix in with our own Output, and combine
+            // both to produce the final array that we will now point at.
+            _outputValue = Output.Concat(_outputValue, values);
+        }
+
         /// <summary>
         /// Concatenates the values in this list with the values in <paramref name="other"/>,
         /// returning the concatenated sequence in a new <see cref="InputList{T}"/>.
